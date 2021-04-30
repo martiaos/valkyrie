@@ -34,24 +34,48 @@ log.info("Logger initialized")
 import PySimpleGUI as sg
 
 # Define the window's contents
-layout = [ [sg.Text("Set values")],
-            [sg.Input()],
-            [sg.Button('Enter'), sg.Button("Exit")]
+top_menu = [ [sg.Text("Valkyrie has awakened! What happens below?")],
+            [sg.Button(key='addPlayers', button_text='Add player character'),
+             sg.Button(key='listChars', button_text='List characters'),
+             sg.Button(key='loadPartyFromFile', button_text='Load party from file')],
+            [sg.Button(key='addEnemies', button_text='Add enemies'),
+            sg.Button(key='loadEnemiesFromFile', button_text="Load enemies from file")
+            ],
+            [sg.Button(key='startBattle', button_text='Start Battle'),
+            sg.Button("Exit")]
          ]
-
 # Create the window
-window = sg.Window("This is a textbox", layout, grab_anywhere=True)
+main_window = sg.Window("Valhalla responds!", top_menu, grab_anywhere=True)
+
+def addPlayers(players):
+    player_menu = [[sg.Text("What is the character name?")],
+               [sg.InputText(key='--IN--')],
+               [sg.Submit(key='addPlayerName', button_text="Submit player name"), sg.Button("Exit")],
+               [sg.Text(size=(15,1), key='-OUTPUT-')]   ]
+    player_window = sg.Window("Adding player character...", player_menu, grab_anywhere=True)
+    while True:
+        p_event, p_values = player_window.read()
+        log.info(m_event)
+        if p_event == sg.WIN_CLOSED or p_event == 'Exit':
+            break
+        if p_event == 'addPlayerName':
+            players.append(p_values['--IN--'])
+            player_window['-OUTPUT-'].update(p_values['--IN--'])
+            break
+    player_window.close()
+    return players
 
 # Display, and interact with the window
+players = []
 while True:
-    event, values = window.read()
-    log.info(event)
-    if event == sg.WIN_CLOSED or event == 'Exit':
+    m_event, m_values = main_window.read()
+    log.info(m_event)
+    if m_event == sg.WIN_CLOSED or m_event == 'Exit':
         break
-    if event == 'Enter':
-        log.info("Button pressed")
-        log.info(f"Entered value {values[0]}")
-window.close()
-
-# Finish up by removing the screen
-window.close()
+    if m_event == 'addPlayers':
+        players = addPlayers(players)
+    if m_event == 'listChars':
+        log.info("Current chars are:")
+        for char in players:
+            log.info(f"{char}")
+main_window.close()
