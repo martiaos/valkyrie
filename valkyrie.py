@@ -3,8 +3,8 @@
 
 # logging
 import logging
-# rich logging
-from rich.logging import RichHandler
+# check platform
+import platform 
 # pretty iters
 from tqdm import tqdm
 # sys flow
@@ -16,12 +16,21 @@ import os
 # Interactive debug
 from IPython import embed
 
-logging.basicConfig(
-    level="INFO",
-    format="%(message)s",
-    datefmt="[%X]",
-    handlers=[RichHandler()]
-)
+if platform.uname().node != 'raspberrypi':
+	from rich.logging import RichHandler
+	logging.basicConfig(
+    		level="INFO",
+    		format="%(message)s",
+    		datefmt="[%X]",
+    		handlers=[RichHandler()]
+		)
+else: 
+	logging.basicConfig(
+		level="INFO",
+		format="%(message)s",
+		datefmt="[%X]",
+		handlers=[logging.StreamHandler()]
+		)
 
 log = logging.getLogger("Valkyrie")
 log.setLevel(logging.INFO)
