@@ -4,7 +4,7 @@
 # logging
 import logging
 # check platform
-import platform 
+import platform
 # pretty iters
 from tqdm import tqdm
 # sys flow
@@ -24,7 +24,7 @@ if platform.uname().node != 'raspberrypi':
     		datefmt="[%X]",
     		handlers=[RichHandler()]
 		)
-else: 
+else:
 	logging.basicConfig(
 		level="INFO",
 		format="%(message)s",
@@ -44,14 +44,15 @@ import PySimpleGUI as sg
 
 # Define the window's contents
 top_menu = [ [sg.Text("Valkyrie has awakened! What happens below?")],
-            [sg.Button(key='addPlayers', button_text='Add player character'),
-             sg.Button(key='listChars', button_text='List characters'),
-             sg.Button(key='loadPartyFromFile', button_text='Load party from file')],
-            [sg.Button(key='addEnemies', button_text='Add enemies'),
-            sg.Button(key='loadEnemiesFromFile', button_text="Load enemies from file")
+            [sg.Button(key='addPlayers', button_text='Add player character', size=(20,5)),
+             sg.Button(key='listChars', button_text='List characters', size=(20,5)),
+             sg.Button(key='loadPartyFromFile', button_text='Load party from file', size=(20,5))],
+            [sg.Button(key='addEnemies', button_text='Add enemies', size=(20,5)),
+			sg.Button(key='listEnemies', button_text='List enemies', size=(20,5)),
+            sg.Button(key='loadEnemiesFromFile', button_text="Load enemies from file", size=(20,5))
             ],
-            [sg.Button(key='startBattle', button_text='Start Battle'),
-            sg.Button("Exit")]
+            [sg.Button(key='startBattle', button_text='Start Battle', size=(32,5)),
+            sg.Button("Exit", size=(32,5))]
          ]
 # Create the window
 main_window = sg.Window("Valhalla responds!", top_menu, grab_anywhere=True)
