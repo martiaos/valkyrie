@@ -4,7 +4,7 @@
 # logging
 import logging
 # check platform
-import platform 
+import platform
 # pretty iters
 from tqdm import tqdm
 # sys flow
@@ -24,7 +24,7 @@ if platform.uname().node != 'raspberrypi':
     		datefmt="[%X]",
     		handlers=[RichHandler()]
 		)
-else: 
+else:
 	logging.basicConfig(
 		level="INFO",
 		format="%(message)s",
@@ -60,7 +60,7 @@ def addPlayers(players):
     player_menu = [[sg.Text("What is the character name?")],
                [sg.InputText(key='--IN--')],
                [sg.Submit(key='addPlayerName', button_text="Submit player name"), sg.Button("Exit")],
-               [sg.Text(size=(15,1), key='-OUTPUT-')]   ]
+               [sg.Text(size=(15,1), key='-OUTPUT-')]]
     player_window = sg.Window("Adding player character...", player_menu, grab_anywhere=True)
     while True:
         p_event, p_values = player_window.read()
@@ -73,6 +73,12 @@ def addPlayers(players):
             break
     player_window.close()
     return players
+
+def loadParty():
+    file_menu = [[sg.Text("What is")],
+               [sg.InputText(key='--IN--')],
+               [sg.Submit(key='addPlayerName', button_text="Submit player name"), sg.Button("Exit")],
+               [sg.Text(size=(15,1), key='-OUTPUT-')]]
 
 # Display, and interact with the window
 players = []
@@ -87,4 +93,6 @@ while True:
         log.info("Current chars are:")
         for char in players:
             log.info(f"{char}")
+    if m_event == 'loadPartyFromFile':
+        players = loadParty()
 main_window.close()
