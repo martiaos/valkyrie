@@ -12,6 +12,7 @@ import sys
 # Loading env
 from dotenv import load_dotenv
 # Reading env
+
 import os
 # Interactive debug
 from IPython import embed
@@ -60,8 +61,8 @@ main_window = sg.Window("Valhalla responds!", top_menu, grab_anywhere=True)
 def addPlayers(players):
     player_menu = [[sg.Text("What is the character name?")],
                [sg.InputText(key='--IN--')],
-               [sg.Submit(key='addPlayerName', button_text="Submit player name"), sg.Button("Exit")],
-               [sg.Text(size=(15,1), key='-OUTPUT-')]   ]
+               [sg.Submit(key='addPlayerName', button_text="Submit player name", size=(10,2)), sg.Button("Exit", size=(10,2))],
+               [sg.Text(size=(15,1), key='-OUTPUT-')]]
     player_window = sg.Window("Adding player character...", player_menu, grab_anywhere=True)
     while True:
         p_event, p_values = player_window.read()
