@@ -61,7 +61,11 @@ main_window = sg.Window("Valhalla responds!", top_menu, grab_anywhere=True)
 def addPlayers(players):
     player_menu = [[sg.Text("What is the character name?")],
                [sg.InputText(key='--IN--')],
+<<<<<<< HEAD
                [sg.Submit(key='addPlayerName', button_text="Submit player name", size=(10,2)), sg.Button("Exit", size=(10,2))],
+=======
+               [sg.Submit(key='addPlayerName', button_text="Submit player name"), sg.Button("Exit")],
+>>>>>>> 74cbe97ae260d9f527eb6e10a44c6c046f7e734d
                [sg.Text(size=(15,1), key='-OUTPUT-')]]
     player_window = sg.Window("Adding player character...", player_menu, grab_anywhere=True)
     while True:
@@ -76,6 +80,12 @@ def addPlayers(players):
     player_window.close()
     return players
 
+def loadParty():
+    file_menu = [[sg.Text("What is")],
+               [sg.InputText(key='--IN--')],
+               [sg.Submit(key='addPlayerName', button_text="Submit player name"), sg.Button("Exit")],
+               [sg.Text(size=(15,1), key='-OUTPUT-')]]
+
 # Display, and interact with the window
 players = []
 while True:
@@ -89,4 +99,6 @@ while True:
         log.info("Current chars are:")
         for char in players:
             log.info(f"{char}")
+    if m_event == 'loadPartyFromFile':
+        players = loadParty()
 main_window.close()
