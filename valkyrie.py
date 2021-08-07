@@ -12,8 +12,9 @@ import sys
 # Loading env
 from dotenv import load_dotenv
 # Reading env
-
 import os
+# Reading paths
+from pathlib import Path
 # Interactive debug
 from IPython import embed
 
@@ -44,7 +45,7 @@ log.info("Logger initialized")
 #Importing package
 import PySimpleGUI as sg
 
-# Define the window's contents
+# Define the base window's contents
 top_menu = [ [sg.Text("Valkyrie has awakened! What happens below?")],
             [sg.Button(key='addPlayers', button_text='Add player character', size=(20,5)),
              sg.Button(key='listChars', button_text='List characters', size=(20,5)),
@@ -56,7 +57,7 @@ top_menu = [ [sg.Text("Valkyrie has awakened! What happens below?")],
             [sg.Button(key='startBattle', button_text='Start Battle', size=(32,5)),
             sg.Button("Exit", size=(32,5))]
          ]
-# Create the window
+# Create the base window
 main_window = sg.Window("Valhalla responds!", top_menu, grab_anywhere=True)
 
 # Defines addPlayers menu 
@@ -70,6 +71,7 @@ def addPlayers(players):
         p_event, p_values = player_window.read()
         log.info(p_event)
         if p_event == sg.WIN_CLOSED or p_event == 'Exit':
+            log.info("Closing window")
             break
         if p_event == 'addPlayerName':
             players.append(p_values['--IN--'])
@@ -93,7 +95,44 @@ def listChars(players):
     player_window.close()
     return players
 
-# Display, and interact with the window 
+
+def popup_text(filename, text):
+
+    layout = [
+        [sg.Multiline(text, size=(80, 25)),],
+    ]
+    win = sg.Window(filename, layout, modal=True, finalize=True)
+
+    while True:
+        event, values = win.read()
+        if event == sg.WINDOW_CLOSED:
+            break
+    win.close()
+
+def loadPartyFromFile():
+    player_menu = [[sg.Input(key='-INPUT-')],
+                  [sg.FileBrowse(key='Browse', file_types=(("TXT Files", "*.txt"), ("ALL Files", "*.*")), target='-INPUT-')],
+                  [sg.Button("Open", size=(10,2)), sg.Button("Exit", size=(10,2))]]
+    player_window = sg.Window("Load party from file", player_menu, grab_anywhere=True)
+  
+    while True:
+        p_event, p_values = player_window.read()
+        log.info(p_event)
+        if p_event == sg.WINDOW_CLOSED or p_event == 'Exit':
+            log.info(p_event)
+            break
+        elif p_event == 'Open':
+            filename = p_values['-INPUT-']
+            if Path(filename).is_file():
+                try:
+                    with open(filename, "rt", encoding='utf-8') as f:
+                        text = f.read()
+                    popup_text(filename, text)
+                except Exception as e:
+                    print("Error: ", e)
+    player_window.close()
+
+# Display, and interact with the main window 
 players = []
 while True:
     m_event, m_values = main_window.read()
@@ -105,4 +144,6 @@ while True:
         players = addPlayers(players)
     if m_event == 'listChars':
         players = listChars(players)
+    if m_event == 'loadPartyFromFile':
+        loadPartyFromFile()
 main_window.close()
