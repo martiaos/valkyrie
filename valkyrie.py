@@ -95,55 +95,70 @@ def listChars(players):
     player_window.close()
     return players
 
-
-def popup_text(filename, text):
-
-    layout = [
-        [sg.Multiline(text, size=(80, 25)),],
-    ]
-    win = sg.Window(filename, layout, modal=True, finalize=True)
+def openFile(filename, text):
+    ''' Used to open a multiline window displaying the content of a file; used in loading-methods'''
+    menu = [[sg.Multiline(text, size=(80, 25))],
+            [sg.Button("Exit", size=(10,2))]]
+    window = sg.Window(filename, menu, modal=True, finalize=True)
 
     while True:
-        event, values = win.read()
-        if event == sg.WINDOW_CLOSED:
+        event, values = window.read()
+        if event == sg.WINDOW_CLOSED or event == 'Exit':
             break
-    win.close()
+    window.close()
 
-def loadPartyFromFile():
+def loadPartyFromFile(players):
+    ''' Allows loading/viewing of .txt files defining character names '''
     player_menu = [[sg.Input(key='-INPUT-')],
                   [sg.FileBrowse(key='Browse', file_types=(("TXT Files", "*.txt"), ("ALL Files", "*.*")), target='-INPUT-')],
-                  [sg.Button("Open", size=(10,2)), sg.Button("Exit", size=(10,2))]]
+                  [sg.Button("Load file", size=(10,2)), sg.Button("View file", size=(10,2)), sg.Button("Exit", size=(10,2))]]
     player_window = sg.Window("Load party from file", player_menu, grab_anywhere=True)
   
     while True:
         p_event, p_values = player_window.read()
         log.info(p_event)
         if p_event == sg.WINDOW_CLOSED or p_event == 'Exit':
-            log.info(p_event)
             break
-        elif p_event == 'Open':
+        elif p_event == 'View file':
             filename = p_values['-INPUT-']
             if Path(filename).is_file():
                 try:
                     with open(filename, "rt", encoding='utf-8') as f:
                         text = f.read()
-                    popup_text(filename, text)
+                        log.info(text)
+                    openFile(filename, text)
                 except Exception as e:
                     print("Error: ", e)
-    player_window.close()
+        elif p_event == 'Load file':
+            filename = p_values['-INPUT-']
+            if Path(filename).is_file():
+                try:
+                    with open(filename, "rt", encoding='utf-8') as f:
+                        lines = [line.rstrip('\n') for line in f]
+                        for line in lines:
+                            log.info(line)
+                            players.append(line)
+                except Exception as e:
+                    print("Error: ", e)
+    player_window.close()   
+    return players
 
 # Display, and interact with the main window 
-players = []
-while True:
-    m_event, m_values = main_window.read()
-    log.info(m_event)
-    if m_event == sg.WIN_CLOSED or m_event == 'Exit':
-        log.info("Closing window")
-        break
-    if m_event == 'addPlayers':
-        players = addPlayers(players)
-    if m_event == 'listChars':
-        players = listChars(players)
-    if m_event == 'loadPartyFromFile':
-        loadPartyFromFile()
-main_window.close()
+def Main(): 
+    ''' The main window, used to call all sub-methods'''
+    players = []
+    while True:
+        m_event, m_values = main_window.read()
+        log.info(m_event)
+        if m_event == sg.WIN_CLOSED or m_event == 'Exit':
+            break
+        if m_event == 'addPlayers':
+            players = addPlayers(players)
+        if m_event == 'listChars':
+            players = listChars(players)
+        if m_event == 'loadPartyFromFile':
+            players = loadPartyFromFile(players)
+    main_window.close()
+
+if __name__ == '__main__':
+    Main()
