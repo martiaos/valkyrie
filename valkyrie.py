@@ -17,6 +17,7 @@ import os
 # Interactive debug
 from IPython import embed
 
+#Check platform; rich not handled on raspi
 if platform.uname().node != 'raspberrypi':
 	from rich.logging import RichHandler
 	logging.basicConfig(
@@ -58,19 +59,16 @@ top_menu = [ [sg.Text("Valkyrie has awakened! What happens below?")],
 # Create the window
 main_window = sg.Window("Valhalla responds!", top_menu, grab_anywhere=True)
 
+# Defines addPlayers menu 
 def addPlayers(players):
     player_menu = [[sg.Text("What is the character name?")],
                [sg.InputText(key='--IN--')],
-<<<<<<< HEAD
                [sg.Submit(key='addPlayerName', button_text="Submit player name", size=(10,2)), sg.Button("Exit", size=(10,2))],
-=======
-               [sg.Submit(key='addPlayerName', button_text="Submit player name"), sg.Button("Exit")],
->>>>>>> 74cbe97ae260d9f527eb6e10a44c6c046f7e734d
                [sg.Text(size=(15,1), key='-OUTPUT-')]]
     player_window = sg.Window("Adding player character...", player_menu, grab_anywhere=True)
     while True:
         p_event, p_values = player_window.read()
-        log.info(m_event)
+        log.info(p_event)
         if p_event == sg.WIN_CLOSED or p_event == 'Exit':
             break
         if p_event == 'addPlayerName':
@@ -80,25 +78,31 @@ def addPlayers(players):
     player_window.close()
     return players
 
-def loadParty():
-    file_menu = [[sg.Text("What is")],
-               [sg.InputText(key='--IN--')],
-               [sg.Submit(key='addPlayerName', button_text="Submit player name"), sg.Button("Exit")],
-               [sg.Text(size=(15,1), key='-OUTPUT-')]]
+# Defines listChars menu
+def listChars(players):
+    msg = ", ".join(players)
+    player_menu = [[sg.Text("Current characters: ")],
+                  [sg.Text(msg)],
+                  [sg.Button(key="Exit", button_text="Ok", size=(10,2))]]
+    player_window = sg.Window("Current characters", player_menu, grab_anywhere=True)
+    while True: 
+        p_event, p_values = player_window.read()
+        log.info(p_event)
+        if p_event == sg.WIN_CLOSED or p_event == 'Exit':
+            break
+    player_window.close()
+    return players
 
-# Display, and interact with the window
+# Display, and interact with the window 
 players = []
 while True:
     m_event, m_values = main_window.read()
     log.info(m_event)
     if m_event == sg.WIN_CLOSED or m_event == 'Exit':
+        log.info("Closing window")
         break
     if m_event == 'addPlayers':
         players = addPlayers(players)
     if m_event == 'listChars':
-        log.info("Current chars are:")
-        for char in players:
-            log.info(f"{char}")
-    if m_event == 'loadPartyFromFile':
-        players = loadParty()
+        players = listChars(players)
 main_window.close()
