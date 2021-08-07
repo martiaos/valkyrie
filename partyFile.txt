@@ -1,0 +1,4 @@
+This is a party file:
+
+Althea: Barbarian, HP: 15, AC 15
+Portia: Druid, HP: 11, AC 12
