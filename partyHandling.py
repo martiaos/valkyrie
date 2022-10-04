@@ -22,14 +22,19 @@ def addPlayers(players):
             break
         if p_event == 'addPlayerName':
             log.info("addPlayerName")
-            if p_values['--IN--'] != "":
-                players.append(p_values['--IN--'])
-                player_window['-OUTPUT-'].update(p_values['--IN--'])
-                log.info(f"Added {p_values['--IN--']}")
+            input_value = p_values['--IN--']
+            if input_value != "" and input_value not in players:
+                players.append(input_value)
+                player_window['-OUTPUT-'].update(input_value)
+                log.info(f"Added {input_value}")
                 break
             else:
-                log.error("Tried adding blank character name")
-                player_window['-OUTPUT-'].update("Character name cannot be blank!")
+                if input_value == "":
+                    log.error("Tried adding blank character name")
+                    player_window['-OUTPUT-'].update("Character name cannot be blank!")
+                else:
+                    log.error("Duplicate character entry")
+                    player_window['-OUTPUT-'].update("A character with this name already exists!")
                 continue
     player_window.close()
     return players
@@ -62,9 +67,10 @@ def openFile(filename, text):
             break
     window.close()
 
-def loadPartyFromFile():
+def loadPartyFromFile(players):
     ''' Allows loading/viewing of .txt files defining character names.
-        Warning! This function wipes the existing player list '''
+        Warning!  This function overwrites the existing players list if a
+        file is loaded succesfully '''
     player_menu = [[sg.Input(key='-INPUT-')],
                   [sg.FileBrowse(key='Browse', file_types=(("TXT Files", "*.txt"), ("ALL Files", "*.*")), target='-INPUT-')],
                   [sg.Button("Load file", size=(10,2)), sg.Button("View file", size=(10,2)), sg.Button("Exit", size=(10,2))],
@@ -95,8 +101,9 @@ def loadPartyFromFile():
                         loadMsg = "Loaded characters: "
                         players = []
                         for line in lines:
-                            players.append(line)
-                            loadMsg += line + " "
+                            players.append(line.strip())
+                        chars = ", ".join(players)
+                        loadMsg = loadMsg + chars
                         player_window['-OUTPUT-'].update(loadMsg)
                         log.info(loadMsg)
                 except Exception as e:

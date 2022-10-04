@@ -6,6 +6,7 @@ import logging
 from pathlib import Path
 
 log = logging.getLogger(__name__)
+
 # Defines addEnemies menu
 def addEnemies(enemies):
     ''' Triggers the addEnemies window '''
@@ -21,14 +22,19 @@ def addEnemies(enemies):
             break
         if p_event == 'addEnemyName':
             log.info("addEnemyName")
-            if p_values['--IN--'] != "":
-                enemies.append(p_values['--IN--'])
-                player_window['-OUTPUT-'].update(p_values['--IN--'])
-                log.info(f"Added {p_values['--IN--']}")
+            input_value = p_values['--IN--']
+            if input_value != "" and input_value not in enemies:
+                enemies.append(input_value)
+                player_window['-OUTPUT-'].update(input_value)
+                log.info(f"Added {input_value}")
                 break
             else:
-                log.error("Tried adding blank enemy name")
-                player_window['-OUTPUT-'].update("Enemy name cannot be blank!")
+                if input_value == "":
+                    log.error("Tried adding blank enemy name")
+                    player_window['-OUTPUT-'].update("Enemy name cannot be blank!")
+                else:
+                    log.error("Duplicate enemy entry")
+                    player_window['-OUTPUT-'].update("An enemy with this name already exists!")
                 continue
     player_window.close()
     return enemies
@@ -62,9 +68,10 @@ def openFile(filename, text):
     window.close()
 
 
-def loadEnemiesFromFile():
+def loadEnemiesFromFile(enemies):
     ''' Allows loading/viewing of .txt files defining enemies.
-        Warning! This function wipes the existing enemies list '''
+        Warning! This function overwrites the existing enemies list if a
+        file is loaded succesfully '''
     player_menu = [[sg.Input(key='-INPUT-')],
                   [sg.FileBrowse(key='Browse', file_types=(("TXT Files", "*.txt"), ("ALL Files", "*.*")), target='-INPUT-')],
                   [sg.Button("Load file", size=(10,2)), sg.Button("View file", size=(10,2)), sg.Button("Exit", size=(10,2))],
@@ -95,8 +102,9 @@ def loadEnemiesFromFile():
                         loadMsg = "Loaded enemies: "
                         enemies = []
                         for line in lines:
-                            enemies.append(line)
-                            loadMsg += line + " "
+                            enemies.append(line.strip())
+                        mobs = ", ".join(enemies)
+                        loadMsg = loadMsg + mobs
                         player_window['-OUTPUT-'].update(loadMsg)
                         log.info(loadMsg)
                 except Exception as e:
