@@ -50,7 +50,7 @@ log.info("Logger initialized")
 import PySimpleGUI as sg
 
 # Define the base window's contents
-top_menu = [ [sg.Text("Valkyrie has awakened! What happens below?")],
+top_menu = [[sg.Text("Valkyrie has awakened! What happens below?")],
             [sg.Button(key='addPlayers', button_text='Add player character', size=(20,5)),
              sg.Button(key='listChars', button_text='List characters', size=(20,5)),
              sg.Button(key='loadPartyFromFile', button_text='Load party from file', size=(20,5)),
@@ -81,7 +81,7 @@ def Main():
         if m_event == 'listChars':
             players = listChars(players)
         if m_event == 'loadPartyFromFile':
-            players = loadPartyFromFile()
+            players = loadPartyFromFile(players)
         if m_event == 'clearParty':
             players = []
         if m_event == 'addEnemies':
@@ -89,7 +89,7 @@ def Main():
         if m_event == 'listEnemies':
             enemies = listEnemies(enemies)
         if m_event == 'loadEnemiesFromFile':
-            enemies = loadEnemiesFromFile()
+            enemies = loadEnemiesFromFile(enemies)
         if m_event == 'clearEnemies':
             enemies =  []
         if m_event == 'startBattle':
