@@ -1,0 +1,2 @@
+#name,hp,ac,initiative_mod
+AnimatedArmor,33,18,0

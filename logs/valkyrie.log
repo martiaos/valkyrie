@@ -1,0 +1,275 @@
+2025-04-24 17:08:52,844 | INFO | Created Alandros (Player) | HP: 26 | AC: 12
+2025-04-24 17:08:52,844 | INFO | Created Aric (Player) | HP: 2 | AC: 15
+2025-04-24 17:08:52,845 | INFO | Created Bjorg (Player) | HP: 22 | AC: 13
+2025-04-24 17:08:52,845 | INFO | Created Heidi (Player) | HP: 32 | AC: 13
+2025-04-24 17:08:52,845 | INFO | Created Hilda (Player) | HP: 23 | AC: 16
+2025-04-24 17:08:52,845 | INFO | Created Oblimati (Player) | HP: 22 | AC: 14
+2025-04-24 17:08:52,846 | INFO | Party load complete.
+2025-04-24 17:08:55,565 | INFO | Created Zhalrek (Enemy) | HP: 24 | AC: 15
+2025-04-24 17:08:55,565 | INFO | Created Kaulzar (Enemy) | HP: 21 | AC: 13
+2025-04-24 17:08:55,565 | INFO | Created Neresh (Enemy) | HP: 18 | AC: 14
+2025-04-24 17:08:55,565 | INFO | Created Hound_1 (Enemy) | HP: 16 | AC: 13
+2025-04-24 17:08:55,566 | INFO | Created Hound_2 (Enemy) | HP: 16 | AC: 13
+2025-04-24 17:08:55,566 | INFO | Created Sereth (Enemy) | HP: 17 | AC: 14
+2025-04-24 17:08:55,566 | INFO | Created Shaiva (Enemy) | HP: 17 | AC: 14
+2025-04-24 17:08:55,566 | INFO | Enemy load complete.
+2025-04-24 17:54:10,785 | INFO | Starting combat...
+2025-04-24 17:54:38,917 | INFO | Initiative order:
+2025-04-24 17:54:38,917 | INFO |   Zhalrek (Enemy) - 23
+2025-04-24 17:54:38,918 | INFO |   Alandros (Player) - 19
+2025-04-24 17:54:38,918 | INFO |   Shaiva (Enemy) - 18
+2025-04-24 17:54:38,918 | INFO |   Aric (Player) - 15
+2025-04-24 17:54:38,918 | INFO |   Kaulzar (Enemy) - 15
+2025-04-24 17:54:38,918 | INFO |   Sereth (Enemy) - 15
+2025-04-24 17:54:38,919 | INFO |   Heidi (Player) - 14
+2025-04-24 17:54:38,919 | INFO |   Hilda (Player) - 12
+2025-04-24 17:54:38,919 | INFO |   Neresh (Enemy) - 11
+2025-04-24 17:54:38,919 | INFO |   Hound_1 (Enemy) - 11
+2025-04-24 17:54:38,919 | INFO |   Bjorg (Player) - 9
+2025-04-24 17:54:38,920 | INFO |   Hound_2 (Enemy) - 8
+2025-04-24 17:54:38,920 | INFO |   Oblimati (Player) - 1
+2025-04-24 17:54:38,920 | INFO | Combat mode active.
+2025-04-24 17:55:17,227 | INFO | Exiting combat mode.
+2025-04-24 17:55:17,228 | INFO | Returned to setup mode.
+2025-04-24 17:55:18,869 | INFO | Starting combat...
+2025-04-24 17:55:40,309 | INFO | Initiative order:
+2025-04-24 17:55:40,310 | INFO |   Alandros (Player) - 19
+2025-04-24 17:55:40,310 | INFO |   Neresh (Enemy) - 17
+2025-04-24 17:55:40,310 | INFO |   Kaulzar (Enemy) - 16
+2025-04-24 17:55:40,311 | INFO |   Heidi (Player) - 14
+2025-04-24 17:55:40,311 | INFO |   Hound_1 (Enemy) - 13
+2025-04-24 17:55:40,311 | INFO |   Aric (Player) - 12
+2025-04-24 17:55:40,311 | INFO |   Hilda (Player) - 12
+2025-04-24 17:55:40,311 | INFO |   Oblimati (Player) - 12
+2025-04-24 17:55:40,312 | INFO |   Hound_2 (Enemy) - 12
+2025-04-24 17:55:40,312 | INFO |   Zhalrek (Enemy) - 11
+2025-04-24 17:55:40,312 | INFO |   Bjorg (Player) - 9
+2025-04-24 17:55:40,312 | INFO |   Sereth (Enemy) - 6
+2025-04-24 17:55:40,313 | INFO |   Shaiva (Enemy) - 5
+2025-04-24 17:55:40,313 | INFO | Combat mode active.
+2025-04-24 18:11:21,385 | INFO | Kaulzar takes 4 damage → HP now 17
+2025-04-24 18:13:18,534 | INFO | Heidi takes 7 damage → HP now 25
+2025-04-24 18:13:34,055 | INFO | Heidi: HP 25 → 32
+2025-04-24 18:20:02,806 | INFO | Shaiva takes 18 damage → HP now 0
+2025-04-24 18:20:02,817 | INFO | Shaiva is now unconscious.
+2025-04-24 18:24:49,086 | INFO | Heidi takes 10 damage → HP now 22
+2025-04-24 18:27:14,404 | INFO | Alandros takes 4 damage → HP now 22
+2025-04-24 18:27:58,585 | INFO | Alandros takes 5 damage → HP now 17
+2025-04-24 18:36:58,446 | INFO | Oblimati takes 7 damage → HP now 15
+2025-04-24 18:48:14,627 | INFO | Sereth takes 7 damage → HP now 10
+2025-04-24 18:49:40,704 | INFO | Starting round 2
+2025-04-24 18:56:27,873 | INFO | Hound_1 takes 6 damage → HP now 10
+2025-04-24 18:56:36,848 | INFO | Aric takes 2 damage → HP now 0
+2025-04-24 18:56:36,849 | INFO | Aric is now unconscious.
+2025-04-24 18:56:47,040 | INFO | Hound_1 takes 4 damage → HP now 6
+2025-04-24 18:57:16,713 | INFO | Hound_1 takes 8 damage → HP now 0
+2025-04-24 18:57:16,713 | INFO | Hound_1 is now unconscious.
+2025-04-24 19:04:01,680 | INFO | Hound_2 takes 7 damage → HP now 9
+2025-04-24 19:06:51,130 | INFO | Sereth takes 7 damage → HP now 3
+2025-04-24 19:08:33,265 | INFO | Heidi takes 7 damage → HP now 15
+2025-04-24 19:08:42,107 | INFO | Zhalrek takes 24 damage → HP now 0
+2025-04-24 19:08:42,108 | INFO | Zhalrek is now unconscious.
+2025-04-24 19:16:05,312 | INFO | Oblimati takes 6 damage → HP now 9
+2025-04-24 19:16:13,094 | INFO | Oblimati: HP 9 → 15
+2025-04-24 19:17:02,591 | INFO | Starting round 3
+2025-04-24 19:25:03,172 | INFO | Kaulzar takes 5 damage → HP now 12
+2025-04-24 19:25:19,348 | INFO | Kaulzar takes 7 damage → HP now 5
+2025-04-24 19:28:06,871 | INFO | Hound_2 takes 8 damage → HP now 1
+2025-04-24 19:35:17,141 | INFO | Aric: HP 0 → 6
+2025-04-24 19:41:54,543 | INFO | Starting round 4
+2025-04-24 19:45:38,735 | INFO | Kaulzar takes 5 damage → HP now 0
+2025-04-24 19:45:38,737 | INFO | Kaulzar is now unconscious.
+2025-04-24 19:47:15,454 | INFO | Sereth takes 5 damage → HP now 0
+2025-04-24 19:47:15,465 | INFO | Sereth is now unconscious.
+2025-04-24 19:49:23,741 | INFO | Hound_2 takes 1 damage → HP now 0
+2025-04-24 19:49:23,742 | INFO | Hound_2 is now unconscious.
+2025-04-24 19:51:02,015 | INFO | Exiting combat mode.
+2025-04-24 19:51:02,016 | INFO | Returned to setup mode.
+2025-07-31 15:41:09,730 | INFO | Party file load canceled.
+2025-07-31 15:41:33,898 | INFO | Created Heidi (Player) | HP: 38 | AC: 17
+2025-07-31 15:41:33,898 | INFO | Created Hilda (Player) | HP: 26 | AC: 13
+2025-07-31 15:41:33,898 | INFO | Created Gorim (Player) | HP: 42 | AC: 18
+2025-07-31 15:41:33,898 | INFO | Created Lia (Player) | HP: 30 | AC: 14
+2025-07-31 15:41:33,899 | INFO | Party load complete.
+2025-07-31 15:46:59,880 | INFO | Cleared all players and enemies.
+2025-07-31 15:47:02,592 | INFO | Created Alandros (Player) | HP: 34 | AC: 12
+2025-07-31 15:47:02,592 | INFO | Created Aric (Player) | HP: 22 | AC: 15
+2025-07-31 15:47:02,593 | INFO | Created Bjorg (Player) | HP: 40 | AC: 13
+2025-07-31 15:47:02,593 | INFO | Created Oblimati (Player) | HP: 30 | AC: 15
+2025-07-31 15:47:02,593 | INFO | Created Hilda (Player) | HP: 28 | AC: 18
+2025-07-31 15:47:02,593 | INFO | Created Heidi (Player) | HP: 43 | AC: 13
+2025-07-31 15:47:02,594 | INFO | Party load complete.
+2025-07-31 15:47:05,546 | INFO | Created Gavain (Enemy) | HP: 52 | AC: 18
+2025-07-31 15:47:05,546 | INFO | Created Corin (Enemy) | HP: 50 | AC: 17
+2025-07-31 15:47:05,547 | INFO | Created Lucian (Enemy) | HP: 47 | AC: 16
+2025-07-31 15:47:05,547 | INFO | Created Gregor (Enemy) | HP: 55 | AC: 17
+2025-07-31 15:47:05,547 | INFO | Created Isadora (Enemy) | HP: 38 | AC: 13
+2025-07-31 15:47:05,548 | INFO | Enemy load complete.
+2025-07-31 15:47:07,984 | INFO | Starting combat...
+2025-07-31 15:47:17,777 | INFO | Initiative order:
+2025-07-31 15:47:17,777 | INFO |   Bjorg (Player) - 22
+2025-07-31 15:47:17,777 | INFO |   Gavain (Enemy) - 18
+2025-07-31 15:47:17,777 | INFO |   Alandros (Player) - 17
+2025-07-31 15:47:17,778 | INFO |   Gregor (Enemy) - 16
+2025-07-31 15:47:17,778 | INFO |   Oblimati (Player) - 15
+2025-07-31 15:47:17,778 | INFO |   Lucian (Enemy) - 14
+2025-07-31 15:47:17,778 | INFO |   Aric (Player) - 13
+2025-07-31 15:47:17,778 | INFO |   Isadora (Enemy) - 13
+2025-07-31 15:47:17,779 | INFO |   Heidi (Player) - 4
+2025-07-31 15:47:17,779 | INFO |   Corin (Enemy) - 4
+2025-07-31 15:47:17,779 | INFO |   Hilda (Player) - 1
+2025-07-31 15:47:17,780 | INFO | Combat mode active.
+2025-07-31 15:47:29,612 | INFO | Starting round 2
+2025-07-31 15:47:31,542 | INFO | Exiting combat mode.
+2025-07-31 15:47:31,543 | INFO | Returned to setup mode.
+2025-07-31 15:47:33,337 | INFO | Cleared all players and enemies.
+2025-07-31 19:54:23,091 | INFO | Created Alandros (Player) | HP: 34 | AC: 12
+2025-07-31 19:54:23,092 | INFO | Created Aric (Player) | HP: 22 | AC: 15
+2025-07-31 19:54:23,092 | INFO | Created Bjorg (Player) | HP: 40 | AC: 13
+2025-07-31 19:54:23,092 | INFO | Created Oblimati (Player) | HP: 30 | AC: 15
+2025-07-31 19:54:23,092 | INFO | Created Hilda (Player) | HP: 28 | AC: 18
+2025-07-31 19:54:23,092 | INFO | Created Heidi (Player) | HP: 43 | AC: 13
+2025-07-31 19:54:23,092 | INFO | Party load complete.
+2025-07-31 19:55:06,330 | ERROR | Error loading party file
+Traceback (most recent call last):
+  File "/home/calnix/projects/valkyrie/logic/file_loaders.py", line 29, in load_party_from_file
+    name, hp, ac = [x.strip() for x in line.split(",")]
+ValueError: too many values to unpack (expected 3)
+2025-07-31 19:56:58,011 | INFO | Created Kaelen (Enemy) | HP: 58 | AC: 17
+2025-07-31 19:56:58,011 | INFO | Created Byren (Enemy) | HP: 55 | AC: 17
+2025-07-31 19:56:58,011 | INFO | Created Elara (Enemy) | HP: 44 | AC: 15
+2025-07-31 19:56:58,011 | INFO | Created Thug_1 (Enemy) | HP: 32 | AC: 12
+2025-07-31 19:56:58,011 | INFO | Created Thug_2 (Enemy) | HP: 35 | AC: 11
+2025-07-31 19:56:58,012 | INFO | Enemy load complete.
+2025-07-31 20:05:18,402 | INFO | Starting combat...
+2025-07-31 20:05:55,188 | INFO | Initiative order:
+2025-07-31 20:05:55,188 | INFO |   Alandros (Player) - 22
+2025-07-31 20:05:55,188 | INFO |   Bjorg (Player) - 22
+2025-07-31 20:05:55,188 | INFO |   Oblimati (Player) - 21
+2025-07-31 20:05:55,188 | INFO |   Elara (Enemy) - 16
+2025-07-31 20:05:55,188 | INFO |   Kaelen (Enemy) - 15
+2025-07-31 20:05:55,188 | INFO |   Thug_1 (Enemy) - 14
+2025-07-31 20:05:55,189 | INFO |   Byren (Enemy) - 10
+2025-07-31 20:05:55,189 | INFO |   Hilda (Player) - 9
+2025-07-31 20:05:55,189 | INFO |   Heidi (Player) - 9
+2025-07-31 20:05:55,189 | INFO |   Aric (Player) - 1
+2025-07-31 20:05:55,189 | INFO |   Thug_2 (Enemy) - 1
+2025-07-31 20:05:55,189 | INFO | Combat mode active.
+2025-07-31 20:14:14,773 | INFO | Kaelen takes 13 damage → HP now 45
+2025-07-31 20:14:49,431 | INFO | Kaelen takes 16 damage → HP now 29
+2025-07-31 20:23:05,657 | INFO | Thug_1 takes 12 damage → HP now 20
+2025-07-31 20:24:11,423 | INFO | Thug_1 takes 14 damage → HP now 6
+2025-07-31 20:25:18,710 | INFO | Kaelen takes 15 damage → HP now 14
+2025-07-31 20:25:54,762 | INFO | Kaelen takes 8 damage → HP now 6
+2025-07-31 20:28:46,824 | INFO | Aric takes 6 damage → HP now 16
+2025-07-31 20:29:06,663 | INFO | Aric takes 4 damage → HP now 12
+2025-07-31 20:29:15,810 | INFO | Aric takes 6 damage → HP now 6
+2025-07-31 20:29:24,023 | INFO | Starting round 2
+2025-07-31 20:30:55,182 | INFO | Kaelen takes 35 damage → HP now 0
+2025-07-31 20:30:55,182 | INFO | Kaelen is now unconscious.
+2025-07-31 20:37:23,052 | INFO | Byren takes 9 damage → HP now 46
+2025-07-31 20:44:21,414 | INFO | Thug_1 takes 29 damage → HP now 0
+2025-07-31 20:44:21,414 | INFO | Thug_1 is now unconscious.
+2025-07-31 20:44:28,107 | INFO | Thug_2 takes 29 damage → HP now 6
+2025-07-31 20:45:26,167 | INFO | Byren takes 29 damage → HP now 17
+2025-07-31 20:45:38,650 | INFO | Hilda takes 29 damage → HP now 0
+2025-07-31 20:45:38,650 | INFO | Hilda is now unconscious.
+2025-07-31 20:45:42,970 | INFO | Aric takes 29 damage → HP now 0
+2025-07-31 20:45:42,971 | INFO | Aric is now unconscious.
+2025-07-31 20:48:50,237 | INFO | Thug_2 takes 10 damage → HP now 0
+2025-07-31 20:48:50,240 | INFO | Thug_2 is now unconscious.
+2025-07-31 20:51:58,985 | INFO | Starting round 3
+2025-07-31 20:57:05,682 | INFO | Elara takes 18 damage → HP now 26
+2025-07-31 21:05:17,242 | INFO | Aric: HP 0 → 7
+2025-07-31 21:05:33,014 | INFO | Hilda: HP 0 → 8
+2025-07-31 21:06:06,554 | INFO | Elara takes 9 damage → HP now 17
+2025-07-31 21:07:57,120 | INFO | Heidi takes 21 damage → HP now 22
+2025-07-31 21:09:01,029 | INFO | Byren takes 10 damage → HP now 7
+2025-07-31 21:10:09,879 | INFO | Byren takes 3 damage → HP now 4
+2025-07-31 21:10:35,168 | INFO | Byren takes 5 damage → HP now 0
+2025-07-31 21:10:35,168 | INFO | Byren is now unconscious.
+2025-08-28 16:48:09,895 | INFO | Party file load canceled.
+2025-08-28 16:55:40,102 | INFO | Party file load canceled.
+2025-08-28 16:55:44,750 | INFO | Created Gavain (Enemy) | HP: 52 | AC: 18
+2025-08-28 16:55:44,750 | INFO | Created Veteran_1 (Enemy) | HP: 58 | AC: 17
+2025-08-28 16:55:44,750 | INFO | Created Vetaran_2 (Enemy) | HP: 49 | AC: 17
+2025-08-28 16:55:44,751 | INFO | Enemy load complete.
+2025-08-28 16:55:48,142 | INFO | Created Rug (Enemy) | HP: 33 | AC: 12
+2025-08-28 16:55:48,142 | INFO | Enemy load complete.
+2025-08-28 16:55:51,777 | INFO | Created Gavain (Enemy) | HP: 52 | AC: 18
+2025-08-28 16:55:51,777 | INFO | Created Corin (Enemy) | HP: 50 | AC: 17
+2025-08-28 16:55:51,777 | INFO | Created Lucian (Enemy) | HP: 47 | AC: 16
+2025-08-28 16:55:51,778 | INFO | Created Gregor (Enemy) | HP: 55 | AC: 17
+2025-08-28 16:55:51,778 | INFO | Created Isadora (Enemy) | HP: 38 | AC: 13
+2025-08-28 16:55:51,779 | INFO | Enemy load complete.
+2025-08-28 16:55:54,726 | INFO | Cleared all players and enemies.
+2025-08-28 16:55:56,796 | INFO | Created Gavain (Enemy) | HP: 52 | AC: 18
+2025-08-28 16:55:56,796 | INFO | Created Corin (Enemy) | HP: 50 | AC: 17
+2025-08-28 16:55:56,797 | INFO | Created Lucian (Enemy) | HP: 47 | AC: 16
+2025-08-28 16:55:56,797 | INFO | Created Gregor (Enemy) | HP: 55 | AC: 17
+2025-08-28 16:55:56,797 | INFO | Created Isadora (Enemy) | HP: 38 | AC: 13
+2025-08-28 16:55:56,797 | INFO | Enemy load complete.
+2025-08-28 16:56:00,989 | INFO | Cleared all players and enemies.
+2025-08-28 16:56:57,152 | INFO | Created Isadora (Enemy) | HP: 127 | AC: 17
+2025-08-28 16:56:57,152 | INFO | Created Retainer_1 (Enemy) | HP: 22 | AC: 12
+2025-08-28 16:56:57,152 | INFO | Created Retainer_2 (Enemy) | HP: 25 | AC: 13
+2025-08-28 16:56:57,153 | INFO | Created Retainer_3 (Enemy) | HP: 19 | AC: 12
+2025-08-28 16:56:57,153 | INFO | Created Retainer_4 (Enemy) | HP: 29 | AC: 13
+2025-08-28 16:56:57,153 | INFO | Enemy load complete.
+2025-08-28 16:57:01,439 | INFO | Cleared all players and enemies.
+2025-08-28 17:42:10,158 | ERROR | Error loading party file
+Traceback (most recent call last):
+  File "/home/calnix/projects/valkyrie/logic/file_loaders.py", line 29, in load_party_from_file
+    name, hp, ac = [x.strip() for x in line.split(",")]
+ValueError: too many values to unpack (expected 3)
+2025-08-28 17:42:13,707 | INFO | Created Alandros (Player) | HP: 34 | AC: 12
+2025-08-28 17:42:13,708 | INFO | Created Aric (Player) | HP: 22 | AC: 15
+2025-08-28 17:42:13,708 | INFO | Created Bjorg (Player) | HP: 40 | AC: 13
+2025-08-28 17:42:13,709 | INFO | Created Oblimati (Player) | HP: 30 | AC: 15
+2025-08-28 17:42:13,709 | INFO | Created Hilda (Player) | HP: 28 | AC: 18
+2025-08-28 17:42:13,709 | INFO | Created Heidi (Player) | HP: 43 | AC: 13
+2025-08-28 17:42:13,709 | INFO | Party load complete.
+2025-08-28 19:03:43,680 | INFO | Created Rug (Enemy) | HP: 33 | AC: 12
+2025-08-28 19:03:43,683 | INFO | Enemy load complete.
+2025-08-28 19:03:46,119 | INFO | Starting combat...
+2025-08-28 19:04:34,406 | INFO | Initiative order:
+2025-08-28 19:04:34,406 | INFO |   Oblimati (Player) - 23
+2025-08-28 19:04:34,406 | INFO |   Heidi (Player) - 18
+2025-08-28 19:04:34,407 | INFO |   Hilda (Player) - 17
+2025-08-28 19:04:34,407 | INFO |   Aric (Player) - 16
+2025-08-28 19:04:34,407 | INFO |   Bjorg (Player) - 14
+2025-08-28 19:04:34,407 | INFO |   Alandros (Player) - 5
+2025-08-28 19:04:34,407 | INFO |   Rug (Enemy) - 5
+2025-08-28 19:04:34,408 | INFO | Combat mode active.
+2025-08-28 19:27:43,837 | INFO | Exiting combat mode.
+2025-08-28 19:27:43,841 | INFO | Returned to setup mode.
+2025-08-28 19:27:47,221 | INFO | Cleared all players and enemies.
+2025-08-28 19:27:54,693 | INFO | Party file load canceled.
+2025-08-28 19:29:28,096 | INFO | Created Alandros (Player) | HP: 34 | AC: 12
+2025-08-28 19:29:28,097 | INFO | Created Krazzan (Player) | HP: 22 | AC: 15
+2025-08-28 19:29:28,097 | INFO | Created Bjorg (Player) | HP: 40 | AC: 13
+2025-08-28 19:29:28,097 | INFO | Created Oblimati (Player) | HP: 30 | AC: 15
+2025-08-28 19:29:28,098 | INFO | Created Hilda (Player) | HP: 28 | AC: 18
+2025-08-28 19:29:28,098 | INFO | Created Heidi (Player) | HP: 43 | AC: 13
+2025-08-28 19:29:28,099 | INFO | Party load complete.
+2025-08-28 19:48:47,743 | INFO | Created AnimatedArmor (Enemy) | HP: 33 | AC: 18
+2025-08-28 19:48:47,745 | INFO | Enemy load complete.
+2025-08-28 19:48:49,187 | INFO | Starting combat...
+2025-08-28 19:49:10,889 | INFO | Initiative order:
+2025-08-28 19:49:10,889 | INFO |   Alandros (Player) - 21
+2025-08-28 19:49:10,889 | INFO |   Heidi (Player) - 14
+2025-08-28 19:49:10,889 | INFO |   Krazzan (Player) - 12
+2025-08-28 19:49:10,890 | INFO |   Bjorg (Player) - 10
+2025-08-28 19:49:10,890 | INFO |   Oblimati (Player) - 9
+2025-08-28 19:49:10,890 | INFO |   Hilda (Player) - 8
+2025-08-28 19:49:10,890 | INFO |   AnimatedArmor (Enemy) - 5
+2025-08-28 19:49:10,891 | INFO | Combat mode active.
+2025-08-28 19:55:10,309 | INFO | AnimatedArmor takes 5 damage → HP now 28
+2025-08-28 19:55:39,996 | INFO | AnimatedArmor takes 9 damage → HP now 19
+2025-08-28 20:04:30,507 | INFO | AnimatedArmor takes 4 damage → HP now 15
+2025-08-28 20:05:30,463 | INFO | AnimatedArmor takes 13 damage → HP now 2
+2025-08-28 20:09:54,501 | INFO | AnimatedArmor takes 9 damage → HP now 0
+2025-08-28 20:09:54,502 | INFO | AnimatedArmor is now unconscious.
+2025-08-28 20:10:50,468 | INFO | Exiting combat mode.
+2025-08-28 20:10:50,468 | INFO | Returned to setup mode.
+2025-08-29 17:07:44,538 | INFO | Enemy file load canceled.

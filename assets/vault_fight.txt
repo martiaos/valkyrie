@@ -1,0 +1,6 @@
+#name,hp,ac,initiative_mod
+Isadora,127,17,3
+Retainer_1,22,12,-1
+Retainer_2,25,13,-1
+Retainer_3,19,12,-1
+Retainer_4,29,13,-1

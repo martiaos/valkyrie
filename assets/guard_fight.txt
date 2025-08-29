@@ -1,0 +1,4 @@
+#name,hp,ac,initiative_mod
+Gavain,52,18,0
+Veteran_1,58,17,1
+Vetaran_2,49,17,1

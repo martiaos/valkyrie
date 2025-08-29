@@ -1,0 +1,6 @@
+# name,hp,ac,initiative_mod
+Gavain,52,18,0
+Corin,50,17,1
+Lucian,47,16,2
+Gregor,55,17,1
+Isadora,38,13,2
