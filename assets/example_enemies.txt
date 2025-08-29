@@ -1,0 +1,5 @@
+# name,hp,ac,initiative_mod
+Goblin,7,15,2
+Orc,15,13,1
+Hobgoblin,20,18,0
+Bandit,11,12,1

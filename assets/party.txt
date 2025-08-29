@@ -1,0 +1,7 @@
+# name,hp,ac
+Alandros,34,12
+Krazzan,22,15
+Bjorg,40,13
+Oblimati,30,15
+Hilda,28,18
+Heidi,43,13
