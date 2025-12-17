@@ -15,7 +15,7 @@ def toggle_mode(widgets):
     if not state.in_combat:
         logger.info("Starting combat...")
 
-        enter_player_initiatives()
+        enter_player_initiatives(widgets["setup_frame"])
 
         for enemy in state.enemies:
             enemy.initiative = randint(1, 20) + enemy.initiative_mod
@@ -57,11 +57,11 @@ def toggle_mode(widgets):
 
     update_display(widgets["display_box"])
 
-def enter_player_initiatives():
+def enter_player_initiatives(parent_widget):
     for p in state.players:
         while True:
             try:
-                value = simpledialog.askinteger("Initiative Roll", f"{p.name}'s initiative:", minvalue=1, maxvalue=30)
+                value = simpledialog.askinteger("Initiative Roll", f"{p.name}'s initiative:", minvalue=1, maxvalue=30, parent=parent_widget)
                 if value is not None:
                     p.initiative = value
                     logger.debug(f"{p.name} set to initiative {value}")
@@ -98,7 +98,7 @@ def hit_selected_creature(widgets):
         messagebox.showwarning("No Target", "Please click on a creature in the list first.")
         return
 
-    dmg = simpledialog.askinteger("Damage", f"How much damage to {target.name}?", minvalue=0)
+    dmg = simpledialog.askinteger("Damage", f"How much damage to {target.name}?", minvalue=0, parent=widgets["display_box"])
 
     if dmg is None:
         return
